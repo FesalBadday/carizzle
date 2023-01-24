@@ -1,15 +1,38 @@
 body {
   margin: 0;
   height: 100vh;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+.container {
+  overflow-x: hidden;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.hero {
   background-image: url('https://r4.wallpaperflare.com/wallpaper/402/508/992/rolls-royce-wraith-rolls-royce-cars-4k-wallpaper-57d5c11858c5be70d0fb2eeaa526c4f7.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .smoke {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -18,6 +41,18 @@ body {
   bottom: 0;
   animation: fog calc(20s * var(--i)) linear infinite;
   filter: blur(3px);
+}
+
+.gallery {
+  background-color: blue;
+}
+
+.team {
+  background-color: grey;
+}
+
+.contact {
+  background-color: green;
 }
 
 @keyframes fog {
