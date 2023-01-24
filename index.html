@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carizzle</title>
   <link rel="stylesheet" href="assets/css/main.css">
+  <script src="assets/js/contact.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,64 @@
     </section>
     <section class="gallery"></section>
     <section class="team"></section>
-    <section class="contact"></section>
+    <section class="contact">
+      <h1>Get In Touch With Us</h1>
+      <div class="container">
+        <div class="contactInfo">
+          <div>
+            <h2>Contact Info</h2>
+            <ul class="info">
+              <li>
+                <span><img src="assets/images/email.png" alt=""></span>
+                <span><a href="mailto:contact@carizzle.carizzle">contact@carizzle.ca</a></span>
+              </li>
+              <li style="margin-bottom: 0px;">
+                <span><img src="assets/images/phone.png" alt=""></span>
+                <span><a href="tel:1234567890">(123) 456-7890</a></span>
+              </li>
+              <li style="margin-top: 0px;">
+                <span></span>
+                <span><a href="tel:1234567890">(123) 456-7890</a></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contactContainer">
+          <h2>Message Us</h2>
+          <div class="formContainer">
+            <form action="#">
+              <input type="hidden" name="_redirect" value="#" />
+              <div class="inputContainer sm">
+                <input type="text" id="first-name" name="First Name" placeholder=" " required>
+                <label for="first-name">First Name</label>
+              </div>
+              <div class="inputContainer sm">
+                <input type="text" id="last-name" name="Last Name" placeholder=" " required>
+                <label for="last-name">Last Name</label>
+              </div>
+              <div class="inputContainer sm">
+                <input type="email" id="email" name="Email" placeholder=" " required>
+                <label for="email">Email Address</label>
+              </div>
+              <div class="inputContainer sm">
+                <input type="tel" id="phone-number" name="Phone Number" placeholder=" " required>
+                <label for="phone-number">Phone Number</label>
+              </div>
+              <div class="inputContainer lg">
+                <textarea type="text" id="message" name="Message" placeholder=" " required></textarea>
+                <label for="message">Message</label>
+              </div>
+              <div>
+                <p class="thank-you-msg hide">
+                  Thank you for contacting us. We will be in touch with you soon.
+                </p>
+                <input class="form-btn" type="submit" value="Send">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </body>
 
