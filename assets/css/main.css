@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 body {
   margin: 0;
   height: 100vh;
   overflow: hidden;
   background: #000;
+  font-family: 'Fredoka One', cursive;
 }
 
 ::-webkit-scrollbar {
@@ -199,18 +202,20 @@ body {
 }
 
 .card .content .info {
-  padding: .5rem;
+  padding: 0rem;
   text-align: center;
 }
 
 .card .content .info h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #ffbb00;
-  line-height: 2rem;
+  line-height: .5rem;
 }
 
 .card .content .info p {
   color: #ffffff;
+  font-size: .9rem;
+  padding: 0 1rem;
 }
 
 @keyframes line {
