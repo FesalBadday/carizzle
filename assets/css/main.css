@@ -11,17 +11,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #f80000;
+  background-color: #ffbb00;
 }
 
 .container {
   overflow-x: hidden;
   height: 100vh;
 }
-
-/* section {
-  height: 100vh;
-} */
 
 /* hero page start */
 .hero {
