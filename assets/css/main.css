@@ -6,33 +6,29 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 2px;
+  background-color: #808080;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #f80000;
 }
 
 .container {
   overflow-x: hidden;
   height: 100vh;
-  scroll-snap-type: y mandatory;
 }
 
-section {
+/* section {
   height: 100vh;
-  scroll-snap-align: start;
-  background-image: url('https://r4.wallpaperflare.com/wallpaper/402/508/992/rolls-royce-wraith-rolls-royce-cars-4k-wallpaper-57d5c11858c5be70d0fb2eeaa526c4f7.jpg');
-  background-size: cover;
-  background-position: center;
-}
+} */
 
 /* hero page start */
-/* .hero {
+.hero {
   background-image: url('https://r4.wallpaperflare.com/wallpaper/402/508/992/rolls-royce-wraith-rolls-royce-cars-4k-wallpaper-57d5c11858c5be70d0fb2eeaa526c4f7.jpg');
   background-size: cover;
   background-position: center;
-} */
+}
 
 .smoke {
   position: relative;
@@ -55,7 +51,7 @@ section {
   }
 
   25%, 75% {
-    opacity: .1;
+    opacity: .10;
   }
 
   100% {
@@ -68,13 +64,70 @@ section {
 
 /* gallery page start */
 .gallery {
-  background-color: blue;
+  display: grid;
+  grid-gap: 10px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 10rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  grid-auto-flow: dense;
+}
+
+.vertical__img {
+  grid-row: span 2;
+}
+
+.horizontal__img {
+  grid-column: span 2;
+}
+
+.large__img {
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+.gallery div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery div img:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.full {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000ee;
+}
+
+@media screen and (max-width: 515px) {
+  .vertical__img {
+    grid-row: span 1;
+  }
+
+  .horizontal__img {
+    grid-column: span 1;
+  }
+
+  .large__img {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
 }
 
 /* gallery page end */
 
 .team {
-  background-color: grey;
   padding: 2rem 0;
 }
 
@@ -110,8 +163,7 @@ section {
   width: 600px;
   height: 200px;
   background: linear-gradient(transparent, #ffffff, #ffbb00, transparent);
-  animation: line 3s linear infinite;
-  animation-direction: alternate;
+  animation: line 7s linear infinite;
 }
 
 .card .line::after {
@@ -119,7 +171,7 @@ section {
   position: absolute;
   inset: 3px;
   background: #292929;
-  border-radius: 2rem;
+  
 }
 
 .card .profile {
@@ -136,32 +188,11 @@ section {
   align-items: center;
 }
 
-.card .profile::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  height: 150px;
-  background: linear-gradient(transparent, #ffbb00, #ffffff, transparent);
-  animation: line 3s linear infinite;
-  animation-direction: alternate-reverse;
-}
-
-.card .profile::after {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  background: #292929;
-  border-radius: 2rem;
-}
-
 .card .profile img {
   position: absolute;
   width: 194px;
   z-index: 1;
   filter: grayscale(1);
-  border-radius: 2rem;
 }
 
 .card .content {
@@ -206,7 +237,7 @@ section {
   align-content: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
-  /* padding: 6rem 0; */
+  padding: 15rem 0;
 }
 
 h1 {
