@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+* {
+  font-family: 'Fredoka One', cursive;
+}
+
 body {
   margin: 0;
   height: 100vh;
   overflow: hidden;
   background: #000;
-  font-family: 'Fredoka One', cursive;
 }
 
 ::-webkit-scrollbar {
