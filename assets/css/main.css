@@ -27,7 +27,7 @@ body {
 
 /* hero page start */
 .hero {
-  background-image: url('../images/bg_car.jpg');
+  background-image: url('../images/bg_car.webp');
   background-size: cover;
   background-position: center;
   opacity: .8;
