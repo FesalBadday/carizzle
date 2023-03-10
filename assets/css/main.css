@@ -27,9 +27,10 @@ body {
 
 /* hero page start */
 .hero {
-  background-image: url('https://r4.wallpaperflare.com/wallpaper/402/508/992/rolls-royce-wraith-rolls-royce-cars-4k-wallpaper-57d5c11858c5be70d0fb2eeaa526c4f7.jpg');
+  background-image: url('/assets/images/bg_car1.jpg');
   background-size: cover;
   background-position: center;
+  opacity: .8;
 }
 
 .smoke {
