@@ -17,7 +17,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #ffbb00;
+  background-color: #b311b3;
 }
 
 .container {
@@ -165,7 +165,7 @@ body {
   left: 50%;
   width: 600px;
   height: 200px;
-  background: linear-gradient(transparent, #ffbb00, #000, transparent);
+  background: linear-gradient(transparent, #b311b3, #000, transparent);
   animation: line 7s linear infinite;
 }
 
@@ -212,7 +212,7 @@ body {
 
 .card .content .info h2 {
   font-size: 1.5rem;
-  color: #ffbb00;
+  color: #b311b3;
   line-height: .5rem;
 }
 
@@ -250,7 +250,7 @@ h1 {
   flex: 1 0 100%;
   text-align: center;
   font-size: clamp(1.8rem, 2.5vw, 4rem);
-  color: #ff8c00;
+  color: #b311b3;
 }
 
 .infoContainer {
@@ -277,7 +277,7 @@ h1 {
 }
 
 .contactInfo h2 {
-  color: #ffa500;
+  color: #b311b3;
   font-size: 1.8rem;
 }
 
@@ -295,14 +295,14 @@ h1 {
 }
 
 .contactInfo .info a {
-  color: #ffa500;
+  color: #b311b3;
   margin-left: 10px;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 .contactInfo .info a:hover {
-  color: #d47500;
+  color: #f5f5f5;
 }
 
 .contactInfo .info li span:nth-child(1) {
@@ -369,7 +369,7 @@ h1 {
 }
 
 .contactContainer form .inputContainer input:focus, .contactContainer form .inputContainer textarea:focus {
-  border-bottom: 2px solid #d47500;
+  border-bottom: 2px solid #b311b3;
 }
 
 .contactContainer form .inputContainer textarea {
@@ -392,7 +392,7 @@ h1 {
   transform: translateY(-22px);
   font-size: 1rem;
   letter-spacing: .5px;
-  color: #d47500;
+  color: #b311b3;
   font-weight: bold;
 }
 
@@ -407,7 +407,7 @@ h1 {
 }
 
 input[type=submit] {
-  background-color: #ff8c00;
+  background-color: #b311b3;
   color: #000;
   padding: 20px 20px;
   margin-bottom: 4rem;
@@ -421,7 +421,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #d47500;
+  background-color: #b83fb8;
 }
 
 /* contact page end */
