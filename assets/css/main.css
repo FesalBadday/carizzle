@@ -39,11 +39,9 @@
 }
 
 .container {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  top: 80%;
-  left: 50%;
+  margin: auto;
+  width: 30px;
+  margin-top: 85vh;
 }
 
 .arrow {
