@@ -3,26 +3,111 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carizzle</title>
   <link rel="stylesheet" href="assets/css/main.css">
-  <script src="assets/js/contact.js" defer></script>
-  <script type="module" src="assets/js/team.mjs"></script>
-  <script src="assets/js/gallery.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
-  <div class="container">
-    <section class="hero">
+  <div class="progress"></div>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <figure></figure>
+      <h2 class="hero__title">Engine Start</h2>
+      <div class="container">
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+      </div>
       <div class="smoke">
         <img src="assets/images/smoke1.webp" style="--i:1" alt="smoke">
         <img src="assets/images/smoke2.webp" style="--i:2" alt="smoke">
         <img src="assets/images/smoke3.webp" style="--i:3" alt="smoke">
         <img src="assets/images/smoke4.webp" style="--i:4" alt="smoke">
       </div>
-    </section>
-    <section class="gallery">
+    </div>
+  </section>
+  <section class="hero">
+    <div class="hero-inner">
+      <figure></figure>
+      <h2 class="hero__title">Engine On</h2>
+    </div>
+  </section>
+  <section class="hero">
+    <div class="hero-inner">
+      <figure></figure>
+      <div class="scroller-container">
+        <div class="scroller" data-direction="right" data-speed="slow">
+          <div class="scroller__inner">
+            <img src="assets/images/art/1.png" alt="" />
+            <img src="assets/images/art/2.png" alt="" />
+            <img src="assets/images/art/3.png" alt="" />
+            <img src="assets/images/art/4.png" alt="" />
+            <img src="assets/images/art/5.png" alt="" />
+            <img src="assets/images/art/6.png" alt="" />
+            <img src="assets/images/art/7.png" alt="" />
+            <img src="assets/images/art/8.png" alt="" />
+            <img src="assets/images/art/9.png" alt="" />
+            <img src="assets/images/art/10.png" alt="" />
+
+          </div>
+        </div>
+
+        <div class="scroller" data-direction="left" data-speed="slow">
+          <div class="scroller__inner">
+            <img src="assets/images/art/11.png" alt="" />
+            <img src="assets/images/art/12.png" alt="" />
+            <img src="assets/images/art/13.png" alt="" />
+            <img src="assets/images/art/14.png" alt="" />
+            <img src="assets/images/art/15.png" alt="" />
+            <img src="assets/images/art/16.png" alt="" />
+            <img src="assets/images/art/17.png" alt="" />
+            <img src="assets/images/art/18.png" alt="" />
+            <img src="assets/images/art/19.png" alt="" />
+            <img src="assets/images/art/20.png" alt="" />
+          </div>
+        </div>
+
+        <div class="scroller" data-direction="right" data-speed="slow">
+          <div class="scroller__inner">
+            <img src="assets/images/art/21.png" alt="" />
+            <img src="assets/images/art/22.png" alt="" />
+            <img src="assets/images/art/23.png" alt="" />
+            <img src="assets/images/art/24.png" alt="" />
+            <img src="assets/images/art/25.png" alt="" />
+            <img src="assets/images/art/26.png" alt="" />
+            <img src="assets/images/art/27.png" alt="" />
+            <img src="assets/images/art/28.png" alt="" />
+            <img src="assets/images/art/29.png" alt="" />
+            <img src="assets/images/art/30.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <article class="content__inner">
+      <h1 class="content__title">Carizzle</h1>
+      <h3 class="content__author">By Fesal Badday</h3>
+      <blockquote>About Us</blockquote>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore ex autem molestias nobis. Voluptates
+        pariatur impedit vitae porro, quia veritatis rerum nihil quaerat, deleniti, nesciunt omnis quidem asperiores
+        temporibus. Quos.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore ex autem molestias nobis. Voluptates
+        pariatur impedit vitae porro, quia veritatis rerum nihil quaerat, deleniti, nesciunt omnis quidem asperiores
+        temporibus. Quos.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore ex autem molestias nobis. Voluptates
+        pariatur impedit vitae porro, quia veritatis rerum nihil quaerat, deleniti, nesciunt omnis quidem asperiores
+        temporibus. Quos.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore ex autem molestias nobis. Voluptates
+        pariatur impedit vitae porro, quia veritatis rerum nihil quaerat, deleniti, nesciunt omnis quidem asperiores
+        temporibus. Quos.</p>
+    </article>
+
+    <div class="gallery">
       <div><img
           src="https://images.unsplash.com/photo-1532751203793-812308a10d8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2FycyUyMGJsYWNrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
           alt="" /></div>
@@ -91,70 +176,8 @@
           alt="" /></div>
 
       <div class="full" onclick="this.style.display='none';"></div>
-    </section>
-    <section class="team">
-      <h1>Directors Board</h1>
-      <div class="teamContainer"></div>
-    </section>
-    <section class="contact">
-      <h1>Get In Touch With Us</h1>
-      <div class="infoContainer">
-        <div class="contactInfo">
-          <div>
-            <h2>Contact Info</h2>
-            <ul class="info">
-              <li>
-                <span><img src="assets/images/email.png" alt=""></span>
-                <span><a href="mailto:contact@carizzle.carizzle">contact@carizzle.ca</a></span>
-              </li>
-              <li style="margin-bottom: 0px;">
-                <span><img src="assets/images/phone.png" alt=""></span>
-                <span><a href="tel:1234567890">(123) 456-7890</a></span>
-              </li>
-              <li style="margin-top: 0px;">
-                <span></span>
-                <span><a href="tel:1234567890">(123) 456-7890</a></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="contactContainer">
-          <h2>Message Us</h2>
-          <div class="formContainer">
-            <form action="#">
-              <input type="hidden" name="_redirect" value="#" />
-              <div class="inputContainer sm">
-                <input type="text" id="first-name" name="First Name" placeholder=" " required>
-                <label for="first-name">First Name</label>
-              </div>
-              <div class="inputContainer sm">
-                <input type="text" id="last-name" name="Last Name" placeholder=" " required>
-                <label for="last-name">Last Name</label>
-              </div>
-              <div class="inputContainer sm">
-                <input type="email" id="email" name="Email" placeholder=" " required>
-                <label for="email">Email Address</label>
-              </div>
-              <div class="inputContainer sm">
-                <input type="tel" id="phone-number" name="Phone Number" placeholder=" " required>
-                <label for="phone-number">Phone Number</label>
-              </div>
-              <div class="inputContainer lg">
-                <textarea type="text" id="message" name="Message" placeholder=" " required></textarea>
-                <label for="message">Message</label>
-              </div>
-              <div>
-                <p class="thank-you-msg hide">
-                  Thank you for contacting us. We will be in touch with you soon.
-                </p>
-                <input class="form-btn" type="submit" value="Send">
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </body>
 
 </html>
