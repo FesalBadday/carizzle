@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="assets/css/main.css">
 
   <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/team.mjs" type="module" defer></script>
   <script src="assets/js/contact.js" defer></script>
 </head>
 
@@ -25,7 +24,7 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <figure class="hero-bg parallax" style="background-image: url('assets/images/1.jpg');"></figure>
+      <figure class="hero-bg parallax" style="background-image: url('/assets/images/bg.jpeg');"></figure>
       <div class="hero-content reveal-up">
         <h2 class="hero__title neon-text">Engine Start</h2>
         <p class="hero__subtitle">Experience the next generation of performance.</p>
@@ -139,23 +138,53 @@
       <div class="vertical__img"><img src="/assets/images/g_2.jpeg" alt="Car 2" loading="lazy" /></div>
       <div class="horizontal__img"><img src="/assets/images/g_3.jpeg" alt="Car 3" loading="lazy" /></div>
       <div class="horizontal__img"><img src="/assets/images/g_4.jpeg" alt="Car 4" loading="lazy" /></div>
-      <div class="horizontal__img"><img src="/assets/images/g_5.jpeg" alt="Car 5" loading="lazy" /></div>
+      <div class="vertical__img"><img src="/assets/images/g_5.jpeg" alt="Car 5" loading="lazy" /></div>
       <div class="vertical__img"><img src="/assets/images/g_6.jpeg" alt="Car 6" loading="lazy" /></div>
-      <div class="large__img"><img src="/assets/images/g_7.jpeg" alt="Car 7" loading="lazy" /></div>
-      <div class="horizontal__img"><img src="/assets/images/g_8.jpeg" alt="Car 8" loading="lazy" /></div>
+      <div class="large__img"><img src="/assets/images/g_8.jpeg" alt="Car 7" loading="lazy" /></div>
+      <div class="vertical__img"><img src="/assets/images/g_7.jpeg" alt="Car 8" loading="lazy" /></div>
     </div>
 
-    <div class="full" id="lightbox">
-      <div class="lightbox-overlay"></div>
-      <img src="" id="lightbox-img" alt="Full View">
-    </div>
   </section>
 
-  <section class="team-section reveal-up">
+  <section class="drive-modes-section reveal-up">
     <div class="section-header">
-      <h2 class="neon-text">Leadership Syndicate</h2>
+      <h2 class="neon-text">Adaptive Protocols</h2>
+      <p style="color: #a0a0a0; margin-top: 10px;">Dynamic profile shifting for any environment.</p>
     </div>
-    <div class="teamContainer">
+    <div class="modes-container">
+      <div class="mode-card glass-panel">
+        <div class="mode-header">
+          <span class="pulse stealth"></span>
+          <h3>Stealth Mode</h3>
+        </div>
+        <p>Urban acoustic dampening and efficiency routing. Prioritizes ride comfort and battery preservation.</p>
+        <div class="mode-stats">
+          <span>Power: 30%</span>
+          <span>Suspension: Soft</span>
+        </div>
+      </div>
+      <div class="mode-card glass-panel">
+        <div class="mode-header">
+          <span class="pulse pursuit"></span>
+          <h3>Pursuit Mode</h3>
+        </div>
+        <p>Unrestricted torque vectoring and active aero deployment. Engineered for closed-circuit dominance.</p>
+        <div class="mode-stats">
+          <span>Power: 100%</span>
+          <span>Suspension: Rigid</span>
+        </div>
+      </div>
+      <div class="mode-card glass-panel">
+        <div class="mode-header">
+          <span class="pulse glide"></span>
+          <h3>Glide Mode</h3>
+        </div>
+        <p>Long-range autonomic cruising. The chassis lowers, and sensors take over for effortless highway transit.</p>
+        <div class="mode-stats">
+          <span>Power: 60%</span>
+          <span>Suspension: Active</span>
+        </div>
+      </div>
     </div>
   </section>
 

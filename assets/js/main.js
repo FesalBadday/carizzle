@@ -35,43 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 4. PERFECTED ABSOLUTE LIGHTBOX (Scroll Lock & Perfect Center)
-  const imgs = document.querySelectorAll('.gallery img');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-
-  imgs.forEach(img => {
-    img.addEventListener('click', function () {
-      lightboxImg.src = this.src;
-
-      // Step 1: Make element structurally block so it occupies space
-      lightbox.style.display = 'block';
-
-      // Step 2: Tiny timeout to allow browser to register block before fading opacity
-      setTimeout(() => {
-        lightbox.classList.add('active');
-      }, 10);
-
-      // Step 3: Hard lock body from scrolling anywhere
-      document.body.classList.add('lightbox-active');
-    });
-  });
-
-  // Clicking the dark overlay closes the lightbox
-  lightbox.addEventListener('click', function () {
-    // Fade out first
-    this.classList.remove('active');
-
-    // Unlock body scrolling
-    document.body.classList.remove('lightbox-active');
-
-    // Wait for CSS transition (0.3s) to finish before fully removing from DOM view
-    setTimeout(() => {
-      this.style.display = 'none';
-      lightboxImg.src = '';
-    }, 300);
-  });
-
   // 5. Interactive Particle Canvas Background
   const canvas = document.getElementById('particle-canvas');
   const ctx = canvas.getContext('2d');

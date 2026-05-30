@@ -26,12 +26,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Scroll Lock for Lightbox */
-body.lightbox-active {
-  overflow: hidden !important;
-  touch-action: none;
-}
-
 /* Typography & Neons */
 .neon-text {
   color: #fff;
@@ -367,23 +361,7 @@ p {
   width: 100%;
   border-radius: 24px;
   filter: grayscale(40%);
-  animation: float 6s ease-in-out infinite;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-20px);
-    box-shadow: 0 50px 80px rgba(0, 243, 255, 0.15);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
 }
 
 /* Tech Matrix Section */
@@ -463,7 +441,6 @@ p {
 }
 
 .gallery img:hover {
-  cursor: pointer;
   transform: scale(1.05);
   filter: grayscale(0%) brightness(1.1);
   box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
@@ -492,125 +469,63 @@ p {
   }
 }
 
-/* PERFECTED ABSOLUTE LIGHTBOX */
-.full {
-  display: none;
-  /* Controlled via JS */
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 9999;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.full.active {
-  opacity: 1;
-}
-
-.lightbox-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(5, 5, 5, 0.95);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  cursor: zoom-out;
-}
-
-.full img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* The ultimate centering hack */
-  max-width: 90vw;
-  /* Guarantees it never touches screen edges horizontally */
-  max-height: 90vh;
-  /* Guarantees it never touches screen edges vertically */
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 243, 255, 0.15);
-  pointer-events: none;
-  /* Let clicks pass through to overlay to close */
-}
-
-/* Team Section */
-.team-section {
+/* Drive Modes Section */
+.drive-modes-section {
   padding: 10vh 5vw;
 }
 
-.teamContainer {
+.modes-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.card {
-  width: 350px;
-  background: rgba(15, 15, 15, 0.6);
-  backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.6);
-  border-radius: 24px;
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.4s ease;
+.mode-card {
+  flex: 1;
+  min-width: 300px;
+  padding: 3rem;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.card:hover {
+.mode-card:hover {
   transform: translateY(-10px);
   border-color: rgba(0, 243, 255, 0.4);
 }
 
-.card .profile {
-  width: 100%;
-  height: 250px;
+.mode-header {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: radial-gradient(circle, rgba(0, 243, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.5rem;
 }
 
-.card .profile img {
-  height: 90%;
-  filter: grayscale(1) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
-  transition: filter 0.4s ease;
-}
-
-.card:hover .profile img {
-  filter: grayscale(0) drop-shadow(0 10px 20px rgba(0, 243, 255, 0.3));
-}
-
-.card .content {
-  padding: 2rem;
-  text-align: center;
-}
-
-.card .content h2 {
+.mode-header h3 {
   font-family: 'Syncopate', sans-serif;
-  color: #fff;
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
-.card .content p:nth-child(2) {
+.pulse.stealth { background: #00ff88; box-shadow: 0 0 10px #00ff88; }
+.pulse.pursuit { background: #ff0055; box-shadow: 0 0 10px #ff0055; }
+.pulse.glide { background: #00f3ff; box-shadow: 0 0 10px #00f3ff; }
+
+.mode-card p {
+  flex-grow: 1;
+}
+
+.mode-stats {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
   color: #00f3ff;
   font-size: 0.9rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.card .content p:last-child {
-  font-size: 0.9rem;
-  color: #a0a0a0;
-  line-height: 1.6;
 }
 
 /* UPGRADED: Terminal Style Contact Section */
