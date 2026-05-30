@@ -4,178 +4,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carizzle</title>
+  <title>Carizzle | Next-Gen Automotive</title>
   <link rel="stylesheet" href="assets/css/main.css">
+
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/team.mjs" type="module" defer></script>
+  <script src="assets/js/contact.js" defer></script>
 </head>
 
 <body>
+  <div id="boot-sequence">
+    <div class="sys-text">SYSTEM.INITIALIZING...</div>
+    <div class="sys-text">LOADING.ASSETS...</div>
+    <div class="sys-text neon-accent">CARIZZLE.OS_V2.0_READY</div>
+  </div>
+
   <div class="progress"></div>
 
+  <canvas id="particle-canvas"></canvas>
+
   <section class="hero">
     <div class="hero-inner">
-      <figure></figure>
-      <h2 class="hero__title">Engine Start</h2>
-      <div class="container">
-        <div class="arrow"></div>
-        <div class="arrow"></div>
-        <div class="arrow"></div>
+      <figure class="hero-bg parallax" style="background-image: url('assets/images/1.jpg');"></figure>
+      <div class="hero-content reveal-up">
+        <h2 class="hero__title neon-text">Engine Start</h2>
+        <p class="hero__subtitle">Experience the next generation of performance.</p>
       </div>
-      <div class="smoke">
-        <img src="assets/images/smoke1.webp" style="--i:1" alt="smoke">
-        <img src="assets/images/smoke2.webp" style="--i:2" alt="smoke">
-        <img src="assets/images/smoke3.webp" style="--i:3" alt="smoke">
-        <img src="assets/images/smoke4.webp" style="--i:4" alt="smoke">
-      </div>
-    </div>
-  </section>
-  <section class="hero">
-    <div class="hero-inner">
-      <figure></figure>
-      <h2 class="hero__title">Engine On</h2>
-    </div>
-  </section>
-  <section class="hero">
-    <div class="hero-inner">
-      <figure></figure>
-      <div class="scroller-container">
-        <div class="scroller" data-direction="right" data-speed="slow">
-          <div class="scroller__inner">
-            <img src="assets/images/art/svg/1.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/2.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/3.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/4.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/5.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/6.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/7.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/8.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/9.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/10.svg" alt="art" loading="lazy">
-
-          </div>
-        </div>
-
-        <div class="scroller" data-direction="left" data-speed="slow">
-          <div class="scroller__inner">
-            <img src="assets/images/art/svg/11.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/12.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/13.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/14.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/15.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/16.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/17.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/18.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/19.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/20.svg" alt="art" loading="lazy">
-          </div>
-        </div>
-
-        <div class="scroller" data-direction="right" data-speed="slow">
-          <div class="scroller__inner">
-            <img src="assets/images/art/svg/21.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/22.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/23.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/24.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/25.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/26.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/27.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/28.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/29.svg" alt="art" loading="lazy">
-            <img src="assets/images/art/svg/30.svg" alt="art" loading="lazy">
-          </div>
-        </div>
+      <div class="scroll-indicator">
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>
       </div>
     </div>
   </section>
 
   <section class="content">
-    <article class="content__inner">
+    <article class="content__inner glass-panel reveal-up">
       <h1 class="content__title">Carizzle</h1>
-      <h3 class="content__author">By Fesal Badday</h3>
-      <blockquote>About Us</blockquote>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore ex autem molestias nobis. Voluptates
-        pariatur impedit vitae porro, quia veritatis rerum nihil quaerat, deleniti, nesciunt omnis quidem asperiores
-        temporibus. Quos.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore ex autem molestias nobis. Voluptates
-        pariatur impedit vitae porro, quia veritatis rerum nihil quaerat, deleniti, nesciunt omnis quidem asperiores
-        temporibus. Quos.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore ex autem molestias nobis. Voluptates
-        pariatur impedit vitae porro, quia veritatis rerum nihil quaerat, deleniti, nesciunt omnis quidem asperiores
-        temporibus. Quos.</p>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore ex autem molestias nobis. Voluptates
-        pariatur impedit vitae porro, quia veritatis rerum nihil quaerat, deleniti, nesciunt omnis quidem asperiores
-        temporibus. Quos.</p>
+      <h3 class="content__author neon-accent">Design & Engineering</h3>
+      <blockquote>Aerodynamics refined to the absolute limit.</blockquote>
+      <p>Every curve and angle is meticulously crafted. The deep void surrounding the chassis isn't just an aesthetic
+        choice; it's a statement of focus. We stripped away the unnecessary to leave only pure, unadulterated
+        performance.</p>
     </article>
+  </section>
 
+  <section class="specs-section reveal-up">
+    <div class="specs-grid">
+      <div class="spec-card glass-panel">
+        <h3 class="neon-text">0-100 KM/H</h3>
+        <p class="spec-value">1.85<span class="unit">s</span></p>
+        <p class="spec-desc">Dual electric motors delivering instantaneous torque.</p>
+      </div>
+      <div class="spec-card glass-panel">
+        <h3 class="neon-text">Top Speed</h3>
+        <p class="spec-value">410<span class="unit">km/h</span></p>
+        <p class="spec-desc">Aerodynamically governed for maximum stability.</p>
+      </div>
+      <div class="spec-card glass-panel">
+        <h3 class="neon-text">Drag Coeff.</h3>
+        <p class="spec-value">0.19<span class="unit">Cd</span></p>
+        <p class="spec-desc">Active aero surfaces adjust dynamically to speed.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="aero-section reveal-up">
+    <div class="aero-container">
+      <div class="aero-text glass-panel">
+        <h2 class="content__title">Sculpted by Air</h2>
+        <p>The Carizzle chassis acts as a wing. Through active vortex generators and a completely flat underbody,
+          negative pressure is weaponized to stick the vehicle to the tarmac at hyper-velocity.</p>
+        <ul class="neon-list">
+          <li>Active Rear Diffuser</li>
+          <li>Laminar Flow Channels</li>
+          <li>Thermal Exhaust Extraction</li>
+        </ul>
+      </div>
+      <div class="aero-visual">
+        <img src="/assets/images/aerodynamics.jpeg" alt="Aerodynamics" class="floating-img">
+      </div>
+    </div>
+  </section>
+
+  <section class="tech-matrix reveal-up">
+    <div class="section-header">
+      <h2 class="neon-text">Core Systems</h2>
+    </div>
+    <div class="matrix-grid">
+      <div class="matrix-item glass-panel">
+        <div class="matrix-icon neon-accent">01</div>
+        <h3>Neural Drive AI</h3>
+        <p>An onboard neural network continuously analyzes telemetry data, optimizing suspension geometry and power
+          distribution 1,000 times per second.</p>
+      </div>
+      <div class="matrix-item glass-panel">
+        <div class="matrix-icon neon-accent">02</div>
+        <h3>Quantum Cell Battery</h3>
+        <p>Solid-state energy storage provides extreme density. Capable of an 80% charge in under 5 minutes via
+          hyper-conduction ports.</p>
+      </div>
+      <div class="matrix-item glass-panel">
+        <div class="matrix-icon neon-accent">03</div>
+        <h3>Kinetic Recovery</h3>
+        <p>Advanced regenerative braking captures thermal and kinetic energy, routing it back into the primary drive
+          systems instantly.</p>
+      </div>
+      <div class="matrix-item glass-panel">
+        <div class="matrix-icon neon-accent">04</div>
+        <h3>Carbon-Titanium Weave</h3>
+        <p>The monocoque chassis is forged from a proprietary blend, offering hyper-car rigidity at a fraction of
+          traditional weight.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cockpit-section reveal-up">
+    <article class="content__inner glass-panel">
+      <h1 class="content__title">The Digital Cockpit</h1>
+      <h3 class="content__author neon-accent">Immersive Interface</h3>
+      <p>The driving experience is commanded through a seamless, edge-to-edge holographic display. The interface
+        utilizes advanced glassmorphism and striking neon accents to guide the operator without distraction.</p>
+      <p>For deep customization, the onboard vehicle configurator renders the chassis using premium 3D clay-style
+        assets, providing a highly tactile, minimalist, and ultra-high-end visual feel right from the driver's seat.</p>
+    </article>
+  </section>
+
+  <section class="gallery-section reveal-up">
+    <div class="section-header">
+      <h2 class="neon-text">Visual Database</h2>
+    </div>
     <div class="gallery">
-      <div><img
-          src="https://images.unsplash.com/photo-1532751203793-812308a10d8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y2FycyUyMGJsYWNrfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="vertical__img"><img
-          src="https://images.unsplash.com/photo-1508046097768-4c131835dcc8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fGNhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="horizontal__img"><img
-          src="https://images.unsplash.com/photo-1602388081464-c8b4948bb4dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGNhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1638073527318-256a88b602dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGNhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1589315106056-cdcb3271602c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fGNhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="vertical__img"><img
-          src="https://images.unsplash.com/photo-1523676060187-f55189a71f5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fGNhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="large__img"><img
-          src="https://images.unsplash.com/photo-1586005809713-8c01fb522038?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjZ8fGNhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1608506436795-af65d01305bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fGNhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="horizontal__img"><img
-          src="https://images.unsplash.com/photo-1590456743652-018ca0b6e4ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fGNhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1584273421792-84b448728b38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTA2fHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1530861579116-b19f2dbf0ca3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTEwfHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1599331629174-17c61f8138f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE2fHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="vertical__img"><img
-          src="https://images.unsplash.com/photo-1615372978007-4833be663051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDg1fHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1617901883714-151853555aa8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE3fHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="large__img"><img
-          src="https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM3fHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1580014317999-e9f1936787a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQyfHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="horizontal__img"><img
-          src="https://images.unsplash.com/photo-1655590547729-a9b686110240?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjY0fHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1617814076231-2c58846db944?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjcyfHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="large__img"><img
-          src="https://images.unsplash.com/photo-1520587210458-bd3bee813b97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjkyfHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1655590548089-810c93bf599a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzQ2fHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div class="horizontal__img"><img
-          src="https://images.unsplash.com/photo-1541348263662-e068662d82af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTM3fHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
-      <div><img
-          src="https://images.unsplash.com/photo-1541443724873-8ba49db7a737?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDc2fHxjYXJzJTIwYmxhY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-          alt="" /></div>
+      <div class="large__img"><img src="/assets/images/g_1.jpeg" alt="Car 1" loading="lazy" /></div>
+      <div class="vertical__img"><img src="/assets/images/g_2.jpeg" alt="Car 2" loading="lazy" /></div>
+      <div class="horizontal__img"><img src="/assets/images/g_3.jpeg" alt="Car 3" loading="lazy" /></div>
+      <div class="horizontal__img"><img src="/assets/images/g_4.jpeg" alt="Car 4" loading="lazy" /></div>
+      <div class="horizontal__img"><img src="/assets/images/g_5.jpeg" alt="Car 5" loading="lazy" /></div>
+      <div class="vertical__img"><img src="/assets/images/g_6.jpeg" alt="Car 6" loading="lazy" /></div>
+      <div class="large__img"><img src="/assets/images/g_7.jpeg" alt="Car 7" loading="lazy" /></div>
+      <div class="horizontal__img"><img src="/assets/images/g_8.jpeg" alt="Car 8" loading="lazy" /></div>
+    </div>
 
-      <div class="full" onclick="this.style.display='none';"></div>
+    <div class="full" id="lightbox">
+      <div class="lightbox-overlay"></div>
+      <img src="" id="lightbox-img" alt="Full View">
+    </div>
+  </section>
+
+  <section class="team-section reveal-up">
+    <div class="section-header">
+      <h2 class="neon-text">Leadership Syndicate</h2>
+    </div>
+    <div class="teamContainer">
+    </div>
+  </section>
+
+  <section class="contact-section reveal-up">
+    <div class="section-header">
+      <h2 class="neon-text">Secure Comm Link</h2>
+      <p style="color: #a0a0a0; margin-top: 10px;">Establish a direct connection to the engineering terminal.</p>
+    </div>
+
+    <div class="contact-container terminal-panel">
+      <div class="ui-line top-left"></div>
+      <div class="ui-line bottom-right"></div>
+
+      <div class="contact-info">
+        <h3 class="neon-accent">Routing Protocols</h3>
+        <ul class="info-list">
+          <li>
+            <img src="assets/images/email.png" alt="Email Icon" class="icon-filter">
+            <a href="mailto:info@carizzle.com">info@carizzle.com</a>
+          </li>
+          <li>
+            <img src="assets/images/phone.png" alt="Phone Icon" class="icon-filter">
+            <a href="tel:+1234567890">SYS_COM: +1 234 567 890</a>
+          </li>
+        </ul>
+        <div class="terminal-status">
+          <span class="pulse"></span> ENCRYPTION_ACTIVE
+        </div>
+      </div>
+
+      <div class="form-container">
+        <form id="contactForm">
+          <div class="input-group">
+            <input type="text" id="name" required placeholder=" ">
+            <label for="name">Operator_ID</label>
+            <span class="input-border"></span>
+          </div>
+          <div class="input-group">
+            <input type="email" id="email" required placeholder=" ">
+            <label for="email">Uplink_Address</label>
+            <span class="input-border"></span>
+          </div>
+          <div class="input-group full-width">
+            <textarea id="message" required placeholder=" "></textarea>
+            <label for="message">Transmission_Data</label>
+            <span class="input-border"></span>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="form-btn neon-button">INITIALIZE_TRANSFER</button>
+          </div>
+          <p class="thank-you-msg hide neon-text">>> TRANSMISSION_SUCCESSFUL. STAND_BY.</p>
+        </form>
+      </div>
     </div>
   </section>
 </body>

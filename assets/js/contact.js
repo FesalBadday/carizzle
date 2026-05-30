@@ -1,9 +1,26 @@
-const form = document.querySelector('form');
+const form = document.getElementById('contactForm');
 const msg = document.querySelector('.thank-you-msg');
 const btn = document.querySelector('.form-btn');
-document.querySelector('form').addEventListener('submit', (e) => {
+
+form.addEventListener('submit', (e) => {
   e.preventDefault();
-  msg.classList.toggle('hide');
-  btn.classList.toggle('hide');
-  setTimeout(() => form.submit(), 2500);
+
+  // Hide the button to simulate system processing
+  btn.classList.add('hide');
+
+  // Reveal the terminal success transmission message
+  msg.classList.remove('hide');
+
+  // Terminal typing simulation for effect
+  let originalText = msg.innerText;
+  msg.innerText = "";
+  let i = 0;
+  let typingEffect = setInterval(() => {
+    msg.innerText += originalText.charAt(i);
+    i++;
+    if (i >= originalText.length) {
+      clearInterval(typingEffect);
+      setTimeout(() => form.submit(), 2500); // Standard submission delay
+    }
+  }, 30);
 });

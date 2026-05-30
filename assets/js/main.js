@@ -1,30 +1,163 @@
-const imgs = document.querySelectorAll('.gallery img');
-const full = document.querySelector('.full');
+document.addEventListener('DOMContentLoaded', () => {
 
-imgs.forEach(img => {
-  img.addEventListener('click', function () {
-    full.style.backgroundImage = 'url(' + img.src + ')';
-    full.style.display = 'block';
+  // 1. System Boot Sequence
+  const bootScreen = document.getElementById('boot-sequence');
+  setTimeout(() => {
+    bootScreen.style.opacity = '0';
+    setTimeout(() => {
+      bootScreen.style.display = 'none';
+    }, 800);
+  }, 2200);
+
+  // 2. Intersection Observer for Scroll Reveals
+  const revealElements = document.querySelectorAll('.reveal-up');
+  const revealOptions = {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const revealOnScroll = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, revealOptions);
+
+  revealElements.forEach(el => revealOnScroll.observe(el));
+
+  // 3. Simple Parallax for Hero Background
+  const heroBg = document.querySelector('.hero-bg');
+  window.addEventListener('scroll', () => {
+    let scrollPos = window.scrollY;
+    if (heroBg) {
+      heroBg.style.transform = `translateY(${scrollPos * 0.4}px)`;
+    }
   });
-});
 
-const scrollers = document.querySelectorAll(".scroller");
+  // 4. PERFECTED ABSOLUTE LIGHTBOX (Scroll Lock & Perfect Center)
+  const imgs = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
 
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  addAnimation();
-}
+  imgs.forEach(img => {
+    img.addEventListener('click', function () {
+      lightboxImg.src = this.src;
 
-function addAnimation() {
-  scrollers.forEach((scroller) => {
-    scroller.setAttribute("data-animated", true);
+      // Step 1: Make element structurally block so it occupies space
+      lightbox.style.display = 'block';
 
-    const scrollerInner = scroller.querySelector(".scroller__inner");
-    const scrollerContent = Array.from(scrollerInner.children);
+      // Step 2: Tiny timeout to allow browser to register block before fading opacity
+      setTimeout(() => {
+        lightbox.classList.add('active');
+      }, 10);
 
-    scrollerContent.forEach((item) => {
-      const duplicatedItem = item.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      scrollerInner.appendChild(duplicatedItem);
+      // Step 3: Hard lock body from scrolling anywhere
+      document.body.classList.add('lightbox-active');
     });
   });
-}
+
+  // Clicking the dark overlay closes the lightbox
+  lightbox.addEventListener('click', function () {
+    // Fade out first
+    this.classList.remove('active');
+
+    // Unlock body scrolling
+    document.body.classList.remove('lightbox-active');
+
+    // Wait for CSS transition (0.3s) to finish before fully removing from DOM view
+    setTimeout(() => {
+      this.style.display = 'none';
+      lightboxImg.src = '';
+    }, 300);
+  });
+
+  // 5. Interactive Particle Canvas Background
+  const canvas = document.getElementById('particle-canvas');
+  const ctx = canvas.getContext('2d');
+  let particlesArray = [];
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    initParticles();
+  });
+
+  let mouse = { x: null, y: null, radius: 150 };
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = e.x;
+    mouse.y = e.y;
+  });
+
+  class Particle {
+    constructor(x, y, directionX, directionY, size, color) {
+      this.x = x;
+      this.y = y;
+      this.directionX = directionX;
+      this.directionY = directionY;
+      this.size = size;
+      this.color = color;
+      this.baseX = this.x;
+      this.baseY = this.y;
+      this.density = (Math.random() * 30) + 1;
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    }
+
+    update() {
+      let dx = mouse.x - this.x;
+      let dy = mouse.y - this.y;
+      let distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < mouse.radius) {
+        this.x -= dx / this.density;
+        this.y -= dy / this.density;
+      } else {
+        if (this.x !== this.baseX) this.x -= (this.x - this.baseX) / 20;
+        if (this.y !== this.baseY) this.y -= (this.y - this.baseY) / 20;
+      }
+
+      this.baseX += this.directionX;
+      this.baseY += this.directionY;
+
+      if (this.baseX < 0 || this.baseX > canvas.width) this.directionX = -this.directionX;
+      if (this.baseY < 0 || this.baseY > canvas.height) this.directionY = -this.directionY;
+
+      this.draw();
+    }
+  }
+
+  function initParticles() {
+    particlesArray = [];
+    let numberOfParticles = (canvas.height * canvas.width) / 12000;
+    for (let i = 0; i < numberOfParticles; i++) {
+      let size = (Math.random() * 2) + 0.5;
+      let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+      let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+      let directionX = (Math.random() * 0.4) - 0.2;
+      let directionY = (Math.random() * 0.4) - 0.2;
+      let color = 'rgba(0, 243, 255, 0.4)';
+      particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+    }
+  }
+
+  function animateParticles() {
+    requestAnimationFrame(animateParticles);
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    for (let i = 0; i < particlesArray.length; i++) {
+      particlesArray[i].update();
+    }
+  }
+
+  initParticles();
+  animateParticles();
+});
