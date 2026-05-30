@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="assets/css/main.css">
 
   <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/contact.js" defer></script>
 </head>
 
 <body>
@@ -24,9 +23,9 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <figure class="hero-bg parallax" style="background-image: url('/assets/images/bg.jpeg');"></figure>
+      <div class="hero-bg parallax"></div>
       <div class="hero-content reveal-up">
-        <h2 class="hero__title neon-text">Engine Start</h2>
+        <h2 class="hero__title neon-text">Carizzle</h2>
         <p class="hero__subtitle">Experience the next generation of performance.</p>
       </div>
       <div class="scroll-indicator">
@@ -188,55 +187,22 @@
     </div>
   </section>
 
-  <section class="contact-section reveal-up">
-    <div class="section-header">
-      <h2 class="neon-text">Secure Comm Link</h2>
-      <p style="color: #a0a0a0; margin-top: 10px;">Establish a direct connection to the engineering terminal.</p>
-    </div>
-
-    <div class="contact-container terminal-panel">
-      <div class="ui-line top-left"></div>
-      <div class="ui-line bottom-right"></div>
-
-      <div class="contact-info">
-        <h3 class="neon-accent">Routing Protocols</h3>
-        <ul class="info-list">
-          <li>
-            <img src="assets/images/email.png" alt="Email Icon" class="icon-filter">
-            <a href="mailto:info@carizzle.com">info@carizzle.com</a>
-          </li>
-          <li>
-            <img src="assets/images/phone.png" alt="Phone Icon" class="icon-filter">
-            <a href="tel:+1234567890">SYS_COM: +1 234 567 890</a>
-          </li>
-        </ul>
-        <div class="terminal-status">
-          <span class="pulse"></span> ENCRYPTION_ACTIVE
+  <section class="config-section reveal-up">
+    <div class="config-container glass-panel">
+      <div class="config-info">
+        <h2 class="neon-text">Holographic Configurator</h2>
+        <p>Initialize the virtual environment to customize your aero package, select material weaves, and tune the Neural Drive parameters.</p>
+        <div class="config-stats">
+          <div><span class="neon-accent">></span> 3.2M Combinations</div>
+          <div><span class="neon-accent">></span> Real-Time Raytracing</div>
+          <div><span class="neon-accent">></span> Neural Telemetry Sync</div>
         </div>
+        <button class="neon-button pulse-btn">ENTER_SIMULATION</button>
       </div>
-
-      <div class="form-container">
-        <form id="contactForm">
-          <div class="input-group">
-            <input type="text" id="name" required placeholder=" ">
-            <label for="name">Operator_ID</label>
-            <span class="input-border"></span>
-          </div>
-          <div class="input-group">
-            <input type="email" id="email" required placeholder=" ">
-            <label for="email">Uplink_Address</label>
-            <span class="input-border"></span>
-          </div>
-          <div class="input-group full-width">
-            <textarea id="message" required placeholder=" "></textarea>
-            <label for="message">Transmission_Data</label>
-            <span class="input-border"></span>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="form-btn neon-button">INITIALIZE_TRANSFER</button>
-          </div>
-          <p class="thank-you-msg hide neon-text">>> TRANSMISSION_SUCCESSFUL. STAND_BY.</p>
-        </form>
+      <div class="config-scanner">
+        <div class="scanner-grid"></div>
+        <div class="scanner-line"></div>
+        <div class="hologram-text">SYSTEM_READY</div>
       </div>
     </div>
   </section>
