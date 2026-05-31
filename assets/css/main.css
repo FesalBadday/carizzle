@@ -694,7 +694,7 @@ p {
   z-index: 2;
   opacity: 0;
   transition: opacity 0.8s ease;
-  filter: drop-shadow(0 0 100px rgba(0, 243, 255, 0.4));
+  /* filter: drop-shadow(0 0 100px rgba(0, 243, 255, 0.4)); */
 }
 
 .scanner-model-img.visible {
