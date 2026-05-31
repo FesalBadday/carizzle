@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
           let modelImg = scanner.querySelector('.scanner-model-img');
           if (!modelImg) {
             modelImg = document.createElement('model-viewer');
-            modelImg.src = 'assets/images/model.glb';
+            modelImg.src = 'assets/images/op_model.glb';
             modelImg.alt = 'Simulation 3D Model';
             modelImg.className = 'scanner-model-img';
             modelImg.setAttribute('auto-rotate', '');
