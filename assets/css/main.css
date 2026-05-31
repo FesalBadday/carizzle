@@ -701,5 +701,18 @@ p {
   .config-info {
     border-right: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .config-info {
+    padding: 2rem 1.5rem;
+  }
+  .neon-button {
+    padding: 1rem;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
   }
 }
