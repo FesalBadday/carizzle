@@ -143,10 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
           // Insert the model image
           let modelImg = scanner.querySelector('.scanner-model-img');
           if (!modelImg) {
-            modelImg = document.createElement('img');
-            modelImg.src = 'assets/images/model.webp';
-            modelImg.alt = 'Simulation Model';
+            modelImg = document.createElement('model-viewer');
+            modelImg.src = 'assets/images/model.glb';
+            modelImg.alt = 'Simulation 3D Model';
             modelImg.className = 'scanner-model-img';
+            modelImg.setAttribute('auto-rotate', '');
+            modelImg.setAttribute('camera-controls', '');
             scanner.appendChild(modelImg);
           }
           
