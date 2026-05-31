@@ -121,6 +121,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // 6. Simulation Button Action
+  const simBtn = document.querySelector('.pulse-btn');
+  if (simBtn) {
+    simBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const originalText = simBtn.innerText;
+      simBtn.innerText = 'INITIALIZING...';
+      
+      setTimeout(() => {
+        const scanner = document.querySelector('.config-scanner');
+        if (scanner) {
+          // Hide the hologram text
+          const holoText = scanner.querySelector('.hologram-text');
+          if (holoText) holoText.style.display = 'none';
+          
+          // Hide the scanning line
+          const scanLine = scanner.querySelector('.scanner-line');
+          if (scanLine) scanLine.style.display = 'none';
+          
+          // Insert the model image
+          let modelImg = scanner.querySelector('.scanner-model-img');
+          if (!modelImg) {
+            modelImg = document.createElement('img');
+            modelImg.src = 'assets/images/model.webp';
+            modelImg.alt = 'Simulation Model';
+            modelImg.className = 'scanner-model-img';
+            scanner.appendChild(modelImg);
+          }
+          
+          // Trigger fade-in
+          setTimeout(() => {
+            modelImg.classList.add('visible');
+            // Hide the button as requested
+            simBtn.style.display = 'none';
+          }, 10);
+        }
+      }, 1200);
+    });
+  }
+
   initParticles();
   animateParticles();
 });
