@@ -121,6 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Preload the 3D model so it's cached in the background
+  const preloadModel = document.createElement('link');
+  preloadModel.rel = 'preload';
+  preloadModel.href = 'assets/images/model.glb';
+  preloadModel.as = 'fetch';
+  document.head.appendChild(preloadModel);
+
   // 6. Simulation Button Action
   const simBtn = document.querySelector('.pulse-btn');
   if (simBtn) {
