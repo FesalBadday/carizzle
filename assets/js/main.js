@@ -156,15 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
             modelImg.className = 'scanner-model-img';
             modelImg.setAttribute('auto-rotate', '');
             modelImg.setAttribute('camera-controls', '');
+
+            // Wait for the model to fully load before revealing it and hiding the button
+            modelImg.addEventListener('load', () => {
+              modelImg.classList.add('visible');
+              simBtn.style.display = 'none';
+            });
+            
             scanner.appendChild(modelImg);
           }
-          
-          // Trigger fade-in
-          setTimeout(() => {
-            modelImg.classList.add('visible');
-            // Hide the button as requested
-            simBtn.style.display = 'none';
-          }, 10);
         }
       }, 1200);
     });
